@@ -48,3 +48,4 @@ do
         fi
         ((count++))
 done
+check $HCount $TCount
