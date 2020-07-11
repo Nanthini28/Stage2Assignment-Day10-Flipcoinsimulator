@@ -36,3 +36,15 @@ done
 check $HCount $TCount
 }
 
+function Tie(){
+while (($HCount-$TCount<2 && $TCount-$HCount<2))
+do
+        result=$((RANDOM%2))
+        if [[ $result -eq $Head ]]
+        then
+                Toss[H]=$((HCount++))
+        else
+                Toss[T]=$((TCount++))
+        fi
+        ((count++))
+done
